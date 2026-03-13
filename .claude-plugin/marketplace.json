@@ -1,17 +1,19 @@
 {
-  "metadata": {
-    "pluginRoot": "."
+  "name": "vsr-skills",
+  "description": "Catálogo de skills e plugins para Claude Code",
+  "owner": {
+    "name": "Vinicius Rocha"
   },
   "plugins": [
     {
       "name": "vsr-skills",
-      "source": ".",
-      "skills": ["./skills"]
+      "source": "./",
+      "description": "Catálogo de skills, hooks e rules para Claude Code"
     },
     {
       "name": "vsr-skills-example",
-      "source": "plugins/vsr-skills-example",
-      "skills": ["./skills"]
+      "source": "./plugins/vsr-skills-example",
+      "description": "Plugin de exemplo para Claude Code"
     }
   ]
 }
