@@ -1,44 +1,44 @@
-# Contribuindo
+# Contributing
 
-Obrigado por considerar contribuir com o vsr-skills.
+Thank you for considering contributing to vsr-skills.
 
-## Como contribuir
+## How to contribute
 
-1. **Fork** o repositório
-2. **Crie uma branch** para sua alteração (`git checkout -b feat/minha-skill`)
-3. **Adicione ou edite** skills/plugins/hooks/rules seguindo as convenções abaixo
-4. **Valide** localmente: `bun run validate`
-5. **Commit** com mensagem clara (`feat: add skill X`, `fix: update plugin Y`)
-6. **Push** e abra um **Pull Request**
+1. **Fork** the repository
+2. **Create a branch** for your change (`git checkout -b feat/my-skill`)
+3. **Add or edit** skills/plugins/hooks/rules following the conventions below
+4. **Validate** locally: `bun run validate`
+5. **Commit** with a clear message (`feat: add skill X`, `fix: update plugin Y`)
+6. **Push** and open a **Pull Request**
 
-## Convenções
+## Conventions
 
 ### Skills
 
-- Cada skill vive em `skills/<nome-da-skill>/`
-- Obrigatório: `SKILL.md` com frontmatter YAML (`name`, `description`)
-- Opcional: `references/`, `templates/` para assets auxiliares
+- Each skill lives in `skills/<skill-name>/`
+- Required: `SKILL.md` with YAML frontmatter (`name`, `description`)
+- Optional: `references/`, `templates/` for auxiliary assets
 
 ### Plugins (Claude Code)
 
-- Cada plugin vive em `plugins/<nome-do-plugin>/`
-- Obrigatório: `.claude-plugin/plugin.json` com `name`, `description`, `version`
-- Skills do plugin em `plugins/<nome>/skills/`
-- README.md com instalação e permissões
+- Each plugin lives in `plugins/<plugin-name>/`
+- Required: `.claude-plugin/plugin.json` with `name`, `description`, `version`
+- Plugin skills in `plugins/<name>/skills/`
+- README.md with installation and permissions
 
-### Hooks e Rules
+### Hooks and Rules
 
-- Hooks em `hooks/<nome>/` com `hooks.json` e README
-- Rules em `rules/<agente>/` com arquivos de regra e README
+- Hooks in `hooks/<name>/` with `hooks.json` and README
+- Rules in `rules/<agent>/` with rule files and README
 
-## Checklist de PR
+## PR Checklist
 
-- [ ] Arquivos obrigatórios presentes
-- [ ] Metadados válidos (frontmatter, plugin.json)
-- [ ] README com instalação e uso
-- [ ] Sem binários ou payloads opacos
-- [ ] `bun run validate` passa
+- [ ] Required files present
+- [ ] Valid metadata (frontmatter, plugin.json)
+- [ ] README with installation and usage
+- [ ] No binaries or opaque payloads
+- [ ] `bun run validate` passes
 
-## Dúvidas
+## Questions
 
-Abra uma [issue](https://github.com/vsanrocha/vsr-skills/issues) para discutir.
+Open an [issue](https://github.com/vsanrocha/vsr-skills/issues) to discuss.

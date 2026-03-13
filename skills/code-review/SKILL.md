@@ -1,16 +1,16 @@
 ---
 name: code-review
-description: Revisa código para boas práticas e possíveis problemas. Use ao revisar PRs, analisar qualidade ou antes de merge.
+description: Reviews code for best practices and potential issues. Use when reviewing PRs, analyzing quality, or before merge.
 ---
 
 # Code Review
 
-Ao revisar código, verifique:
+When reviewing code, check:
 
-1. **Organização e estrutura** — responsabilidades claras, arquivos focados
-2. **Tratamento de erros** — exceções, fallbacks, mensagens úteis
-3. **Segurança** — inputs sanitizados, sem credenciais expostas
-4. **Testes** — cobertura adequada para lógica crítica
-5. **Documentação** — README, comentários onde necessário
+1. **Organization and structure** — clear responsibilities, focused files
+2. **Error handling** — exceptions, fallbacks, useful messages
+3. **Security** — sanitized inputs, no exposed credentials
+4. **Tests** — adequate coverage for critical logic
+5. **Documentation** — README, comments where needed
 
-Priorize feedback acionável e evite nitpicks sem impacto.
+Prioritize actionable feedback and avoid nitpicks with no impact.

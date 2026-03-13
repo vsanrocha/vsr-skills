@@ -1,16 +1,16 @@
 ---
 name: debug-checklist
-description: Checklist sistemático para debugar bugs. Use ao investigar falhas, testes quebrados ou comportamento inesperado.
+description: Systematic checklist for debugging bugs. Use when investigating failures, broken tests, or unexpected behavior.
 ---
 
 # Debug Checklist
 
-Antes de propor correção:
+Before proposing a fix:
 
-1. **Reproduzir** — o bug ocorre de forma consistente? Em qual ambiente?
-2. **Isolar** — qual é o menor input/cenário que reproduz?
-3. **Rastrear** — stack trace, logs, breakpoints. Onde falha exatamente?
-4. **Hipótese** — qual a causa provável? Teste com mudança mínima.
-5. **Verificar** — a correção resolve sem regressões?
+1. **Reproduce** — does the bug occur consistently? In which environment?
+2. **Isolate** — what is the smallest input/scenario that reproduces it?
+3. **Trace** — stack trace, logs, breakpoints. Where does it fail exactly?
+4. **Hypothesize** — what is the likely cause? Test with minimal change.
+5. **Verify** — does the fix resolve without regressions?
 
-Documente o que foi tentado e o resultado antes de pedir ajuda.
+Document what was tried and the result before asking for help.

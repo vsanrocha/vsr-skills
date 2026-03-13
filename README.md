@@ -1,62 +1,74 @@
 # vsr-skills
 
-Catálogo público de skills, plugins, hooks e rules para agentes de código. **Foco principal: Claude Code**, com compatibilidade para Cursor, Codex, Antigravity e outros.
+Public catalog of skills, plugins, hooks and rules for coding agents. **Primary focus: Claude Code**, with compatibility for Cursor, Codex, Antigravity and others.
 
 ## Quick Start (Claude Code)
 
-### Instalar via repositório
+### Install via repository
 
 ```bash
-# Registrar este repositório como marketplace e instalar o plugin principal
+# Register this repository as marketplace and install the main plugin
 /plugin marketplace add vsanrocha/vsr-skills
 /plugin install vsr-skills@vsr-skills-marketplace
 ```
 
-### Instalar skills diretamente
+### Install skills directly
 
-Se você usa Claude Code com skills em `.claude/skills/`, pode clonar ou copiar as skills:
+If you use Claude Code with skills in `.claude/skills/`, you can clone or copy the skills:
 
 ```bash
 git clone https://github.com/vsanrocha/vsr-skills.git
 cp -r vsr-skills/skills/* ~/.claude/skills/
-# ou para o projeto atual:
+# or for the current project:
 cp -r vsr-skills/skills/* .claude/skills/
 ```
 
-### Via npx skills (multi-agente)
+### Via npx skills (multi-agent)
 
 ```bash
 npx skills add vsanrocha/vsr-skills -a claude-code
 ```
 
-## Estrutura
+## Updating
 
-| Diretório | Conteúdo |
-|-----------|----------|
-| `skills/` | Skills reutilizáveis (SKILL.md) |
-| `plugins/` | Plugins empacotados para Claude Code |
-| `hooks/` | Hooks de automação |
-| `rules/` | Rules por agente/editor |
+Plugins are **not** updated automatically. When skills or plugins change in this repository, run:
 
-## Compatibilidade
+```bash
+# Update this marketplace specifically
+/plugin marketplace update vsr-skills
 
-| Agente | Tier | Instalação |
+# Or update all registered marketplaces at once
+/plugin marketplace update
+```
+
+## Structure
+
+| Directory | Content |
+|-----------|---------|
+| `skills/` | Reusable skills (SKILL.md) |
+| `plugins/` | Packaged plugins for Claude Code |
+| `hooks/` | Automation hooks |
+| `rules/` | Rules per agent/editor |
+
+## Compatibility
+
+| Agent | Tier | Installation |
 |--------|------|------------|
-| **Claude Code** | 1 | Plugin marketplace, repositório, `.claude/skills/` |
+| **Claude Code** | 1 | Plugin marketplace, repository, `.claude/skills/` |
 | Cursor | 2 | `.cursor/skills/`, npx skills |
 | Codex | 2 | `.codex/skills/`, npx skills |
 | Antigravity | 2 | `.gemini/antigravity/skills/`, npx skills |
 
-## Segurança
+## Security
 
-- Catálogo 100% em texto aberto, sem binários.
-- Cada item documenta permissões e limitações.
-- Consulte [SECURITY.md](SECURITY.md) para política de vulnerabilidades.
+- Catalog 100% in open text, no binaries.
+- Each item documents permissions and limitations.
+- See [SECURITY.md](SECURITY.md) for vulnerability policy.
 
-## Contribuir
+## Contributing
 
-Veja [CONTRIBUTING.md](CONTRIBUTING.md) para padrões e fluxo de contribuição.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for standards and contribution flow.
 
-## Licença
+## License
 
-MIT — veja [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).

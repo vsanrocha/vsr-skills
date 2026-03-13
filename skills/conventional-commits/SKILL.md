@@ -1,25 +1,25 @@
 ---
 name: conventional-commits
-description: Gera mensagens de commit no padrão Conventional Commits. Use ao commitar, criar changelog ou documentar mudanças.
+description: Generates commit messages in Conventional Commits format. Use when committing, creating changelog, or documenting changes.
 ---
 
 # Conventional Commits
 
-Siga o formato:
+Follow the format:
 
 ```
-<tipo>(<escopo>): <descrição>
+<type>(<scope>): <description>
 
-[corpo opcional]
+[optional body]
 
-[rodapé opcional]
+[optional footer]
 ```
 
-**Tipos:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
-**Exemplos:**
+**Examples:**
 - `feat(auth): add login with OAuth`
 - `fix(api): handle null response`
 - `docs: update README installation`
 
-Mensagem em imperativo, minúscula (exceto após `:`), sem ponto final na primeira linha.
+Use imperative mood, lowercase (except after `:`), no period at end of first line.

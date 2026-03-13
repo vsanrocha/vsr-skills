@@ -1,18 +1,18 @@
 ---
 name: my-skill
-description: Breve descrição do que faz e quando usar. Use quando o usuário pedir X ou Y.
+description: Brief description of what it does and when to use it. Use when the user asks for X or Y.
 ---
 
-# Nome da Skill
+# Skill Name
 
-Instruções para o agente seguir quando esta skill for ativada.
+Instructions for the agent to follow when this skill is activated.
 
-## Quando usar
+## When to use
 
-Descreva os cenários onde a skill deve ser acionada.
+Describe the scenarios where the skill should be triggered.
 
-## Passos
+## Steps
 
-1. Primeiro, faça X
-2. Depois, faça Y
-3. Por fim, valide Z
+1. First, do X
+2. Then, do Y
+3. Finally, validate Z

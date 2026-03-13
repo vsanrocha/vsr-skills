@@ -1,29 +1,29 @@
-# Política de Segurança
+# Security Policy
 
-## Filosofia
+## Philosophy
 
-O vsr-skills é um catálogo **auditável em texto aberto**. Não incluímos binários, payloads opacos ou instruções que exfiltrem dados sem consentimento explícito.
+vsr-skills is an **auditable open-text catalog**. We do not include binaries, opaque payloads, or instructions that exfiltrate data without explicit consent.
 
 ## Trust Model
 
-- **100% open source**: todo conteúdo é texto legível e auditável
-- **Sem binários**: nenhum executável ou artefato compilado
-- **Revisão humana**: itens novos passam por PR e checklist de segurança
-- **Permissões documentadas**: cada plugin/skill declara o que acessa (rede, filesystem, etc.)
+- **100% open source**: all content is readable and auditable text
+- **No binaries**: no executables or compiled artifacts
+- **Human review**: new items go through PR and security checklist
+- **Documented permissions**: each plugin/skill declares what it accesses (network, filesystem, etc.)
 
-## O que não aceitamos
+## What we do not accept
 
-- Código ofuscado ou minificado
-- Binários ou artefatos compilados
-- Skills/plugins que acessem credenciais ou env vars sem documentação explícita
-- Instruções que incentivem jailbreak ou bypass de guardrails
+- Obfuscated or minified code
+- Binaries or compiled artifacts
+- Skills/plugins that access credentials or env vars without explicit documentation
+- Instructions that encourage jailbreak or guardrail bypass
 
-## Reportar vulnerabilidades
+## Reporting vulnerabilities
 
-**Não abra issues públicas para vulnerabilidades.**
+**Do not open public issues for vulnerabilities.**
 
-Use [GitHub Security Advisories](https://github.com/vsanrocha/vsr-skills/security/advisories/new) para reportar de forma privada.
+Use [GitHub Security Advisories](https://github.com/vsanrocha/vsr-skills/security/advisories/new) to report privately.
 
-Inclua: descrição, passos para reproduzir, componente afetado, impacto potencial.
+Include: description, steps to reproduce, affected component, potential impact.
 
-Objetivo: reconhecer em até 48h e resolver em até 14 dias.
+Goal: acknowledge within 48h and resolve within 14 days.

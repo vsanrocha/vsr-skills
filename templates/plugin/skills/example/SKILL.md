@@ -1,6 +1,6 @@
 ---
 name: example
-description: Skill de exemplo. Substitua por suas skills.
+description: Example skill. Replace with your own skills.
 ---
 
-Instruções da skill.
+Skill instructions.

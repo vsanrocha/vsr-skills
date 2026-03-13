@@ -7,7 +7,7 @@
 - Each item includes date + "Do instead".
 
 ## Execution & Validation (Highest Priority)
-1. **[2025-03-13] Validar catálogo antes de PR**
+1. **[2025-03-13] Validate catalog before PR**
    Do instead: `bun run check` (build + validate + check-security).
 
 ## Shell & Command Reliability

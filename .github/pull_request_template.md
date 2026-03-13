@@ -1,25 +1,25 @@
-## Descrição
+## Description
 
-<!-- Descreva o que este PR faz -->
+<!-- Describe what this PR does -->
 
-## Tipo
+## Type
 
-- [ ] Nova skill
-- [ ] Novo plugin
-- [ ] Novo hook/rule
-- [ ] Correção
-- [ ] Documentação
-- [ ] Outro
+- [ ] New skill
+- [ ] New plugin
+- [ ] New hook/rule
+- [ ] Fix
+- [ ] Documentation
+- [ ] Other
 
 ## Checklist
 
-- [ ] Arquivos obrigatórios presentes (SKILL.md, plugin.json, README conforme o tipo)
-- [ ] Metadados válidos (frontmatter, plugin.json)
-- [ ] README com instalação e uso
-- [ ] Sem binários ou payloads opacos
-- [ ] `npm run validate` passa localmente
+- [ ] Required files present (SKILL.md, plugin.json, README as applicable)
+- [ ] Valid metadata (frontmatter, plugin.json)
+- [ ] README with installation and usage
+- [ ] No binaries or opaque payloads
+- [ ] `bun run validate` passes locally
 
-## Segurança
+## Security
 
-- [ ] Nenhum acesso a credenciais/env sem documentação
-- [ ] Permissões (rede, filesystem) documentadas no README do item
+- [ ] No credential/env access without documentation
+- [ ] Permissions (network, filesystem) documented in item README

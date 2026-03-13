@@ -1,12 +1,12 @@
-# Allowlist para exceções de scan de segurança
-# Formato: skill/plugin, código do finding, razão, aprovado por, data
+# Allowlist for security scan exceptions
+# Format: skill/plugin, finding code, reason, approved by, date
 version: "1.0.0"
 
 entries: []
-# Exemplo:
+# Example:
 # - skill: my-skill
 #   code: W011
-#   reason: Integração com API confiável documentada. Revisado em 2025-01-01.
+#   reason: Fetches from trusted first-party API — expected behavior. Reviewed 2025-01-01.
 #   allowedBy: github.com/username
 #   allowedAt: "2025-01-01"
 #   expiresAt: "2026-01-01"

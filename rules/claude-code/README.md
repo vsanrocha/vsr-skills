@@ -1,11 +1,11 @@
 # Rules — Claude Code
 
-Regras e convenções para uso com Claude Code neste repositório.
+Rules and conventions for use with Claude Code in this repository.
 
-## Arquivos
+## Files
 
-- `AGENTS.md` — instruções para o agente (Claude Code, Cursor, etc.)
+- `AGENTS.md` — instructions for the agent (Claude Code, Cursor, etc.)
 
-## Como usar
+## How to use
 
-Copie ou symlink para `.claude/` ou `.cursor/` conforme o agente.
+Copy or symlink to `.claude/` or `.cursor/` as appropriate for your agent.

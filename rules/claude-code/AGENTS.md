@@ -1,8 +1,8 @@
-# Regras para Claude Code
+# Rules for Claude Code
 
-Regras gerais ao usar este repositório com Claude Code:
+General rules when using this repository with Claude Code:
 
-1. **Skills primeiro** — verifique se alguma skill aplica antes de responder
-2. **Commits atômicos** — um conceito por commit, mensagem em Conventional Commits
-3. **Testes** — escreva testes para lógica nova quando fizer sentido
-4. **Docs** — atualize README e CONTRIBUTING quando mudar fluxos
+1. **Skills first** — check if any skill applies before responding
+2. **Atomic commits** — one concept per commit, message in Conventional Commits
+3. **Tests** — write tests for new logic when it makes sense
+4. **Docs** — update README and CONTRIBUTING when changing flows

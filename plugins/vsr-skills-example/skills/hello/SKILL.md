@@ -1,6 +1,6 @@
 ---
 name: hello
-description: Cumprimento simples. Use para testar se o plugin está carregado.
+description: Simple greeting. Use to test if the plugin is loaded.
 ---
 
-Cumprimente o usuário de forma breve e pergunte como pode ajudar.
+Greet the user briefly and ask how you can help.

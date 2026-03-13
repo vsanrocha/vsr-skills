@@ -1,12 +1,12 @@
 # lint-on-save
 
-Hook de exemplo que dispara após Write/Edit. Substitua o comando pelo seu linter real.
+Example hook that triggers after Write/Edit. Replace the command with your real linter.
 
-## Uso
+## Usage
 
-Copie `hooks.json` para `.claude/settings.json` ou para `hooks/hooks.json` do seu plugin.
+Copy `hooks.json` to `.claude/settings.json` or to `hooks/hooks.json` in your plugin.
 
-Exemplo com ESLint:
+Example with ESLint:
 
 ```json
 {
@@ -26,4 +26,4 @@ Exemplo com ESLint:
 }
 ```
 
-**Compatível com:** Claude Code (Tier 1)
+**Compatible with:** Claude Code (Tier 1)

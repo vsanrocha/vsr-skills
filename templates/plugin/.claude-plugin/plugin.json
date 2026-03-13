@@ -1,8 +1,8 @@
 {
   "name": "my-plugin",
-  "description": "Descrição do plugin para o gerenciador de plugins.",
+  "description": "Plugin description for the plugin manager.",
   "version": "1.0.0",
   "author": {
-    "name": "Seu Nome"
+    "name": "Your Name"
   }
 }

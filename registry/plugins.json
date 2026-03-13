@@ -2,7 +2,7 @@
   "plugins": [
     {
       "name": "vsr-skills-example",
-      "description": "Plugin de exemplo para Claude Code. Demonstra estrutura de plugin marketplace-ready.",
+      "description": "Example plugin for Claude Code. Demonstrates marketplace-ready plugin structure.",
       "version": "1.0.0",
       "path": "plugins/vsr-skills-example",
       "targets": [

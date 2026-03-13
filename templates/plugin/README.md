@@ -1,20 +1,20 @@
 # my-plugin
 
-Descrição do plugin.
+Plugin description.
 
-## Instalação
+## Installation
 
 ```bash
 /plugin install my-plugin@marketplace
 ```
 
-## Permissões
+## Permissions
 
-- **Rede:** não/sim
+- **Network:** no/yes
 - **Filesystem:** read-only/workspace/writes
-- **Revisado:** sim
+- **Reviewed:** yes
 
-## Estrutura
+## Structure
 
 ```
 my-plugin/

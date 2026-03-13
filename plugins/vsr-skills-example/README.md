@@ -1,24 +1,24 @@
 # vsr-skills-example
 
-Plugin de exemplo para Claude Code, pronto para marketplace.
+Example plugin for Claude Code, marketplace-ready.
 
-## Instalação
+## Installation
 
 ```bash
-# Via marketplace (quando registrado)
+# Via marketplace (when registered)
 /plugin install vsr-skills-example@vsr-skills-marketplace
 
-# Local (desenvolvimento)
+# Local (development)
 claude --plugin-dir ./plugins/vsr-skills-example
 ```
 
-## Permissões
+## Permissions
 
-- **Rede:** não
-- **Filesystem:** read-only (apenas leitura de contexto)
-- **Revisado:** sim
+- **Network:** no
+- **Filesystem:** read-only (context reading only)
+- **Reviewed:** yes
 
-## Estrutura
+## Structure
 
 ```
 vsr-skills-example/
