@@ -8,6 +8,15 @@
       "targets": [
         "claude-code"
       ]
+    },
+    {
+      "name": "conventional-commits",
+      "description": "Conventional Commits workflow with Co-Authored-By enforcement hook. Includes the conventional-commits skill and a PreToolUse hook that blocks AI attribution lines from commit messages.",
+      "version": "1.0.0",
+      "path": "plugins/conventional-commits",
+      "targets": [
+        "claude-code"
+      ]
     }
   ]
 }

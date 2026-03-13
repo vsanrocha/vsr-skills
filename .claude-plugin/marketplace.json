@@ -14,6 +14,11 @@
       "name": "vsr-skills-example",
       "source": "./plugins/vsr-skills-example",
       "description": "Example plugin for Claude Code"
+    },
+    {
+      "name": "conventional-commits",
+      "source": "./plugins/conventional-commits",
+      "description": "Conventional Commits workflow with Co-Authored-By enforcement hook"
     }
   ]
 }
