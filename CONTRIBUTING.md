@@ -7,7 +7,7 @@ Obrigado por considerar contribuir com o vsr-skills.
 1. **Fork** o repositório
 2. **Crie uma branch** para sua alteração (`git checkout -b feat/minha-skill`)
 3. **Adicione ou edite** skills/plugins/hooks/rules seguindo as convenções abaixo
-4. **Valide** localmente: `npm run validate`
+4. **Valide** localmente: `bun run validate`
 5. **Commit** com mensagem clara (`feat: add skill X`, `fix: update plugin Y`)
 6. **Push** e abra um **Pull Request**
 
@@ -37,8 +37,8 @@ Obrigado por considerar contribuir com o vsr-skills.
 - [ ] Metadados válidos (frontmatter, plugin.json)
 - [ ] README com instalação e uso
 - [ ] Sem binários ou payloads opacos
-- [ ] `npm run validate` passa
+- [ ] `bun run validate` passa
 
 ## Dúvidas
 
-Abra uma [issue](https://github.com/viniciusrocha/vsr-skills/issues) para discutir.
+Abra uma [issue](https://github.com/vsanrocha/vsr-skills/issues) para discutir.

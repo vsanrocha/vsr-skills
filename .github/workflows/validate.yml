@@ -12,20 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "20"
-          cache: "npm"
+          bun-version: latest
 
       - name: Install
-        run: npm install
+        run: bun install
 
       - name: Build registry
-        run: npm run build
+        run: bun run build
 
       - name: Validate catalog
-        run: npm run validate
+        run: bun run validate
 
       - name: Security check
-        run: npm run check-security
+        run: bun run check-security

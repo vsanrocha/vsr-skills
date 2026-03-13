@@ -12,9 +12,9 @@
       ]
     },
     {
-      "name": "conventional-commits",
-      "description": "Gera mensagens de commit no padrão Conventional Commits. Use ao commitar, criar changelog ou documentar mudanças.",
-      "path": "skills/conventional-commits",
+      "name": "debug-checklist",
+      "description": "Checklist sistemático para debugar bugs. Use ao investigar falhas, testes quebrados ou comportamento inesperado.",
+      "path": "skills/debug-checklist",
       "targets": [
         "claude-code",
         "cursor",
@@ -23,9 +23,9 @@
       ]
     },
     {
-      "name": "debug-checklist",
-      "description": "Checklist sistemático para debugar bugs. Use ao investigar falhas, testes quebrados ou comportamento inesperado.",
-      "path": "skills/debug-checklist",
+      "name": "conventional-commits",
+      "description": "Gera mensagens de commit no padrão Conventional Commits. Use ao commitar, criar changelog ou documentar mudanças.",
+      "path": "skills/conventional-commits",
       "targets": [
         "claude-code",
         "cursor",

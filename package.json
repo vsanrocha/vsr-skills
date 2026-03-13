@@ -2,10 +2,11 @@
   "name": "vsr-skills",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "bun@1",
   "scripts": {
-    "build": "node scripts/build-registry.mjs",
-    "validate": "node scripts/validate-catalog.mjs",
-    "check-security": "node scripts/check-security.mjs",
-    "check": "npm run build && npm run validate && npm run check-security"
+    "build": "bun run scripts/build-registry.mjs",
+    "validate": "bun run scripts/validate-catalog.mjs",
+    "check-security": "bun run scripts/check-security.mjs",
+    "check": "bun run build && bun run validate && bun run check-security"
   }
 }

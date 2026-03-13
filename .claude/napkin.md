@@ -8,7 +8,7 @@
 
 ## Execution & Validation (Highest Priority)
 1. **[2025-03-13] Validar catálogo antes de PR**
-   Do instead: `npm run check` (build + validate + check-security).
+   Do instead: `bun run check` (build + validate + check-security).
 
 ## Shell & Command Reliability
 _(empty — add entries as patterns emerge)_

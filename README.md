@@ -8,7 +8,7 @@ Catálogo público de skills, plugins, hooks e rules para agentes de código. **
 
 ```bash
 # Registrar este repositório como marketplace e instalar o plugin principal
-/plugin marketplace add viniciusrocha/vsr-skills
+/plugin marketplace add vsanrocha/vsr-skills
 /plugin install vsr-skills@vsr-skills-marketplace
 ```
 
@@ -17,7 +17,7 @@ Catálogo público de skills, plugins, hooks e rules para agentes de código. **
 Se você usa Claude Code com skills em `.claude/skills/`, pode clonar ou copiar as skills:
 
 ```bash
-git clone https://github.com/viniciusrocha/vsr-skills.git
+git clone https://github.com/vsanrocha/vsr-skills.git
 cp -r vsr-skills/skills/* ~/.claude/skills/
 # ou para o projeto atual:
 cp -r vsr-skills/skills/* .claude/skills/
@@ -26,7 +26,7 @@ cp -r vsr-skills/skills/* .claude/skills/
 ### Via npx skills (multi-agente)
 
 ```bash
-npx skills add viniciusrocha/vsr-skills -a claude-code
+npx skills add vsanrocha/vsr-skills -a claude-code
 ```
 
 ## Estrutura

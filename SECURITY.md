@@ -22,7 +22,7 @@ O vsr-skills é um catálogo **auditável em texto aberto**. Não incluímos bin
 
 **Não abra issues públicas para vulnerabilidades.**
 
-Use [GitHub Security Advisories](https://github.com/viniciusrocha/vsr-skills/security/advisories/new) para reportar de forma privada.
+Use [GitHub Security Advisories](https://github.com/vsanrocha/vsr-skills/security/advisories/new) para reportar de forma privada.
 
 Inclua: descrição, passos para reproduzir, componente afetado, impacto potencial.
 
