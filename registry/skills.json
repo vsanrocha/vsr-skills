@@ -23,9 +23,20 @@
       ]
     },
     {
-      "name": "conventional-commits",
-      "description": "Generates commit messages in Conventional Commits format. Use when committing, creating changelog, or documenting changes.",
+      "name": "conventional-commit",
+      "description": ">",
       "path": "skills/conventional-commits",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "publish-to-vsr",
+      "description": "Publishes skills, hooks, rules, or plugins to the vsr-skills public catalog. Use when the user asks to \"publish to vsr\", \"save this skill to my repo\", \"add to vsr-skills catalog\", or wants to share an item publicly.",
+      "path": "skills/publish-to-vsr",
       "targets": [
         "claude-code",
         "cursor",
