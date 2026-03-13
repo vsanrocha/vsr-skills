@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
- * Build registry: scan catalog and generate skills.json, plugins.json
+ * Build registry: sync plugin symlinks, scan catalog, generate skills.json and plugins.json
  */
 import { readdirSync, readFileSync, existsSync, writeFileSync, mkdirSync } from "fs";
+import { execFileSync } from "child_process";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -84,6 +85,9 @@ function main() {
 }
 
 try {
+  execFileSync(process.execPath, [join(__dirname, "sync-symlinks.mjs")], {
+    stdio: "inherit",
+  });
   main();
 } catch (e) {
   console.error(e);

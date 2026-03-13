@@ -2,7 +2,7 @@
 /**
  * Validate catalog: required files, frontmatter, plugin manifests, no binaries
  */
-import { readdirSync, readFileSync, existsSync, statSync } from "fs";
+import { readdirSync, readFileSync, existsSync, statSync, lstatSync, readlinkSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -110,11 +110,57 @@ function validateRoot() {
   }
 }
 
+function validatePluginSymlinks() {
+  const pluginsDir = join(ROOT, "plugins");
+  if (!existsSync(pluginsDir)) return;
+  const entries = readdirSync(pluginsDir, { withFileTypes: true }).filter((d) => d.isDirectory());
+
+  for (const d of entries) {
+    const manifestPath = join(pluginsDir, d.name, ".claude-plugin", "plugin.json");
+    if (!existsSync(manifestPath)) continue;
+    let manifest;
+    try { manifest = JSON.parse(readFileSync(manifestPath, "utf-8")); } catch { continue; }
+
+    for (const skill of manifest.skills ?? []) {
+      const linkPath = join(pluginsDir, d.name, "skills", skill);
+      if (!existsSync(linkPath) && !lstatSync(linkPath)?.isSymbolicLink?.()) {
+        fail(`plugins/${d.name}/skills/${skill}: declared in plugin.json but not found`);
+        continue;
+      }
+      if (!lstatSync(linkPath).isSymbolicLink()) {
+        fail(`plugins/${d.name}/skills/${skill}: must be a symlink to skills/${skill}, not a copy`);
+      } else {
+        const target = readlinkSync(linkPath);
+        if (target !== `../../../skills/${skill}`) {
+          fail(`plugins/${d.name}/skills/${skill}: symlink points to '${target}', expected '../../../skills/${skill}'`);
+        }
+      }
+    }
+
+    for (const hook of manifest.hooks ?? []) {
+      const linkPath = join(pluginsDir, d.name, "hooks", hook);
+      if (!existsSync(linkPath) && !lstatSync(linkPath)?.isSymbolicLink?.()) {
+        fail(`plugins/${d.name}/hooks/${hook}: declared in plugin.json but not found`);
+        continue;
+      }
+      if (!lstatSync(linkPath).isSymbolicLink()) {
+        fail(`plugins/${d.name}/hooks/${hook}: must be a symlink to hooks/${hook}, not a copy`);
+      } else {
+        const target = readlinkSync(linkPath);
+        if (target !== `../../../hooks/${hook}`) {
+          fail(`plugins/${d.name}/hooks/${hook}: symlink points to '${target}', expected '../../../hooks/${hook}'`);
+        }
+      }
+    }
+  }
+}
+
 function main() {
   console.log("Validating catalog...");
   validateRoot();
   validateSkills();
   validatePlugins();
+  validatePluginSymlinks();
   validateNoBinaries(join(ROOT, "skills"), "skills");
   validateNoBinaries(join(ROOT, "plugins"), "plugins");
   validateNoBinaries(join(ROOT, "hooks"), "hooks");

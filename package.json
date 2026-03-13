@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "bun@1",
   "scripts": {
+    "sync": "bun run scripts/sync-symlinks.mjs",
     "build": "bun run scripts/build-registry.mjs",
     "validate": "bun run scripts/validate-catalog.mjs",
     "check-security": "bun run scripts/check-security.mjs",

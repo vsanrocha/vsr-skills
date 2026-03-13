@@ -1,3 +1,15 @@
 {
-  "skills": []
+  "skills": [
+    {
+      "name": "conventional-commit",
+      "description": ">",
+      "path": "skills/conventional-commits",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    }
+  ]
 }
