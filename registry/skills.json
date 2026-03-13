@@ -1,0 +1,37 @@
+{
+  "skills": [
+    {
+      "name": "code-review",
+      "description": "Revisa código para boas práticas e possíveis problemas. Use ao revisar PRs, analisar qualidade ou antes de merge.",
+      "path": "skills/code-review",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "conventional-commits",
+      "description": "Gera mensagens de commit no padrão Conventional Commits. Use ao commitar, criar changelog ou documentar mudanças.",
+      "path": "skills/conventional-commits",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "debug-checklist",
+      "description": "Checklist sistemático para debugar bugs. Use ao investigar falhas, testes quebrados ou comportamento inesperado.",
+      "path": "skills/debug-checklist",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    }
+  ]
+}

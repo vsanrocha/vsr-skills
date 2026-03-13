@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CatalogItem",
+  "description": "Metadata for a skill, plugin, hook, or rule in the vsr-skills catalog",
+  "type": "object",
+  "required": ["name", "type", "summary", "targets"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+      "description": "Unique identifier (lowercase, hyphens allowed)"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["skill", "plugin", "hook", "rule"]
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Brief description of what it does and when to use it"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "claude-code",
+          "cursor",
+          "codex",
+          "antigravity",
+          "opencode",
+          "cline"
+        ]
+      },
+      "minItems": 1,
+      "description": "Supported agents (claude-code is Tier 1)"
+    },
+    "install": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["repo", "plugin-marketplace", "manual"]
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "network": { "type": "boolean" },
+        "filesystem": {
+          "type": "string",
+          "enum": ["read-only", "workspace", "writes"]
+        },
+        "reviewed": { "type": "boolean" }
+      }
+    }
+  }
+}

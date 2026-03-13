@@ -1,0 +1,9 @@
+{
+  "name": "vsr-skills",
+  "description": "Catálogo de skills, hooks e rules para Claude Code. Foco em práticas e automações reutilizáveis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vinicius Rocha"
+  },
+  "repository": "https://github.com/viniciusrocha/vsr-skills"
+}

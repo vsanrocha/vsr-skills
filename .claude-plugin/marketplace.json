@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "vsr-skills",
+      "source": ".",
+      "skills": ["./skills"]
+    },
+    {
+      "name": "vsr-skills-example",
+      "source": "plugins/vsr-skills-example",
+      "skills": ["./skills"]
+    }
+  ]
+}

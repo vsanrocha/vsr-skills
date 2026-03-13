@@ -1,0 +1,31 @@
+{
+  "tier1": {
+    "claude-code": {
+      "paths": [".claude/skills/", "~/.claude/skills/"],
+      "installModes": ["plugin-marketplace", "repo", "manual"],
+      "pluginManifest": ".claude-plugin/plugin.json"
+    }
+  },
+  "tier2": {
+    "cursor": {
+      "paths": [".cursor/skills/", "~/.cursor/skills/"],
+      "installModes": ["repo", "manual"]
+    },
+    "codex": {
+      "paths": [".codex/skills/", "~/.codex/skills/"],
+      "installModes": ["repo", "manual"]
+    },
+    "antigravity": {
+      "paths": [".gemini/antigravity/skills/", "~/.gemini/antigravity/skills/"],
+      "installModes": ["repo", "manual"]
+    },
+    "opencode": {
+      "paths": [".opencode/skills/", "~/.config/opencode/skills/"],
+      "installModes": ["repo", "manual"]
+    },
+    "cline": {
+      "paths": [".cline/skills/", "~/.cline/skills/"],
+      "installModes": ["repo", "manual"]
+    }
+  }
+}
