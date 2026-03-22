@@ -1,9 +1,53 @@
 {
   "skills": [
     {
+      "name": "write-a-prd",
+      "description": "Create a PRD through user interview, codebase exploration, and module design, then submit as a GitHub issue. Use when user wants to write a PRD, create a product requirements document, or plan a new feature.",
+      "path": "skills/write-a-prd",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+      "path": "skills/grill-me",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "prd-to-issues",
+      "description": "Break a PRD into independently-grabbable GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.",
+      "path": "skills/prd-to-issues",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
       "name": "conventional-commit",
       "description": ">",
       "path": "skills/conventional-commits",
+      "targets": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "antigravity"
+      ]
+    },
+    {
+      "name": "publish-to-vsr",
+      "description": "Publishes skills, hooks, rules, or plugins to the vsr-skills public catalog. Use when the user asks to \"publish to vsr\", \"save this skill to my repo\", \"add to vsr-skills catalog\", or wants to share an item publicly.",
+      "path": "skills/publish-to-vsr",
       "targets": [
         "claude-code",
         "cursor",
