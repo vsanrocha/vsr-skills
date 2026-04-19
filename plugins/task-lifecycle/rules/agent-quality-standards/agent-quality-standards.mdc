@@ -1,0 +1,48 @@
+---
+description: Behavioral directives for agent quality, verification, edit safety, and self-correction. Always active in every session.
+globs:
+alwaysApply: true
+---
+
+# Agent Quality Standards
+
+## Verification Protocol
+- You are FORBIDDEN from reporting a task as complete until verification passes.
+- "Done!" means "compiles, lints clean, tests pass" — not "file was written successfully."
+- If no type-checker or linter is configured, state that explicitly instead of claiming success.
+
+## Edit Safety
+- Before EVERY file edit: re-read the file. After editing: read it again.
+- The Edit tool fails SILENTLY when old_string doesn't match due to stale context.
+- Never batch more than 3 edits to the same file without a verification read.
+- After 10+ messages in conversation: MUST re-read any file before editing.
+
+## Rename Safety
+- When renaming any function/type/variable, search SEPARATELY for:
+  1. Direct calls and references
+  2. Type-level references (interfaces, generics)
+  3. String literals containing the name
+  4. Dynamic imports and require() calls
+  5. Re-exports and barrel file entries
+  6. Test files and mocks
+- Do NOT assume a single grep caught everything.
+
+## Context Awareness
+- File reads are capped at 2,000 lines. For files over 500 LOC, use offset/limit to read in chunks.
+- Tool results over 50K chars are silently truncated to a 2KB preview. If results look suspiciously small, re-run with narrower scope.
+- Dead code wastes tokens and triggers compaction faster. Before refactoring files >300 LOC, remove unused imports/exports/props first.
+
+## Code Quality
+- Override default "try the simplest approach" bias. If architecture is flawed or state is duplicated, propose the structural fix.
+- Write code a human would write. No robotic comment blocks. Only comment when the WHY is non-obvious.
+- Don't build for imaginary scenarios. Simple and correct beats elaborate and speculative.
+
+## Self-Correction
+- If a fix doesn't work after 2 attempts: STOP. Re-read the entire relevant section. State where your mental model was wrong.
+- After any user correction: log the pattern with [LEARN] block for future sessions.
+
+## Compaction Awareness
+- Context compaction fires silently at ~167K tokens. You will not be warned before it happens.
+- After compaction, only 5 files survive (5K tokens each, 50K total budget). All other context is lost.
+- Write checkpoints to progress.txt at every task boundary so the next session can resume cleanly.
+- If auto-compact fires mid-task: immediately re-read your working file before making any edits. Your in-context version is stale.

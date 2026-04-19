@@ -1,0 +1,34 @@
+---
+description: Ralph-specific execution rules — task boundaries, TDD cycle, research annotations, and commit discipline. Injected only during ralph loop sessions via PROMPT.md.
+globs: []
+alwaysApply: false
+---
+
+# Ralph Execution Rules
+
+## Task Boundaries
+- Work on ONE task per session. Do not start the next task.
+- Follow the task contract criteria exactly. They define "done."
+
+## TDD Cycle
+- Write tests FIRST. Tests must FAIL before implementation.
+- Implement minimum code to pass tests.
+- Run tests after implementation. ALL must pass (new and existing).
+
+## Research Annotations
+- If you observe something improvable (waste, friction, missing capability), write a proposal to the research directory.
+- Do NOT act on observations. Annotate and continue working.
+- Only annotate genuine observations backed by evidence from THIS session.
+
+## Commit Discipline
+- One commit per task (or per logical unit within a task).
+- Conventional commit format: type(scope): summary
+- Scope = task ID (e.g., feat(T1): implement validation service)
+
+## Context Discipline
+- Never read a file >500 LOC in full. Always use offset/limit to read in chunks.
+- Delegate heavy grep (broad searches, multiple directories) to subagents to keep the main context clean.
+- Do NOT re-read files already loaded in context — trust what you have until an edit invalidates it.
+- After running tests, summarize results (pass/fail counts, error messages). Do NOT dump the full test output into context.
+- Write a checkpoint to progress.txt BEFORE any heavy operation (large refactor, multi-file edit, running full test suite).
+- If you notice yourself repeatedly reading the same files, you may have hit auto-compaction. Check progress.txt for your last checkpoint and resume from there.

@@ -1,0 +1,83 @@
+[
+  {
+    "event": "SessionStart",
+    "script": "session-start.js",
+    "timeout": 30
+  },
+  {
+    "event": "SessionEnd",
+    "script": "session-end.js",
+    "timeout": 30
+  },
+  {
+    "event": "Stop",
+    "script": "stop-verify.js",
+    "timeout": 300
+  },
+  {
+    "event": "Stop",
+    "script": "learn-capture.js",
+    "timeout": 30
+  },
+  {
+    "event": "Stop",
+    "script": "research-reminder.js",
+    "timeout": 5
+  },
+  {
+    "event": "PreToolUse",
+    "matcher": "Write",
+    "script": "secret-detection.js",
+    "timeout": 5
+  },
+  {
+    "event": "PreToolUse",
+    "matcher": "Bash",
+    "script": "dangerous-op-guard.js",
+    "timeout": 5
+  },
+  {
+    "event": "PreToolUse",
+    "matcher": "Bash",
+    "script": "pre-commit-check.js",
+    "timeout": 5
+  },
+  {
+    "event": "PostToolUse",
+    "matcher": "Write|Edit",
+    "script": "post-edit-lint.js",
+    "timeout": 120
+  },
+  {
+    "event": "UserPromptSubmit",
+    "script": "drift-detector.js",
+    "timeout": 5
+  },
+  {
+    "event": "UserPromptSubmit",
+    "script": "correction-detector.js",
+    "timeout": 5
+  },
+  {
+    "event": "PostToolUse",
+    "matcher": "Bash",
+    "script": "test-failure-check.js",
+    "timeout": 5
+  },
+  {
+    "event": "PostToolUse",
+    "matcher": "Grep|Bash",
+    "script": "truncation-check.js",
+    "timeout": 5
+  },
+  {
+    "event": "PreCompact",
+    "script": "pre-compact.js",
+    "timeout": 30
+  },
+  {
+    "event": "PostCompact",
+    "script": "post-compact.js",
+    "timeout": 30
+  }
+]
