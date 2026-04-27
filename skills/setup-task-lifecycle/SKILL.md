@@ -9,7 +9,7 @@ description: >
 
 # Setup Task-Lifecycle v2
 
-Installs the full Task-Lifecycle v2 plugin from the local repo.
+Installs the full Task-Lifecycle v2 plugin from the plugin cache.
 
 ## Usage
 
@@ -19,38 +19,32 @@ Installs the full Task-Lifecycle v2 plugin from the local repo.
 
 ## What It Does
 
-Runs the install script at `plugins/task-lifecycle/scripts/install.js` from the
-`management-ai-helper` repo root. The script is idempotent — safe to run multiple
-times, skips anything already installed.
+Runs the install script at `scripts/install.js` from the `vsr-skills` plugin cache.
+The script is idempotent — safe to run multiple times, skips anything already installed.
 
 **Steps performed:**
-1. Copies hooks → `~/.claude/hooks/task-lifecycle/`
-2. Copies `db/` → `~/.claude/hooks/db/`
-3. Copies scripts → `~/.agents/scripts/`
-4. Registers hooks in `~/.claude/settings.json`
-5. Registers plugin in `enabledPlugins` + `extraKnownMarketplaces`
-6. Updates `installed_plugins.json`
-7. Syncs skills to plugin cache
+1. Copies `db/` → `~/.claude/hooks/db/`
+2. Copies scripts → `~/.agents/scripts/`
+3. Registers hooks in `~/.claude/settings.json`
+4. Registers plugin in `enabledPlugins` + `extraKnownMarketplaces`
+5. Updates `installed_plugins.json`
+6. Syncs skills to plugin cache
 
 ## Instructions
 
-1. Locate the `management-ai-helper` repo:
-   - Check common paths: `~/projetos/management-ai-helper`, `~/projects/management-ai-helper`
-   - If not found, ask the user: "Where is the management-ai-helper repo?"
-
-2. Run the install script:
+1. Run the install script from the plugin cache:
    ```bash
-   bun {repo-root}/plugins/task-lifecycle/scripts/install.js
+   bash -c 'bun "$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/"*/scripts/install.js'
    ```
 
-3. Display the output as a checklist:
+2. Display the output as a checklist:
    - `[x]` for each `✓` line
    - `[-]` for each `–` (skipped) line
    - `[ ]` for each `✗` (failed) line
 
-4. If any step fails, report the error and suggest a fix.
+3. If any step fails, report the error and suggest a fix.
 
-5. Tell the user: **"Restart your Claude Code session to load all hooks and skills."**
+4. Tell the user: **"Restart your Claude Code session to load all hooks and skills."**
 
 ## Repair Mode
 

@@ -1052,7 +1052,7 @@ graph LR
 
 ```bash
 # Install the plugin
-/plugin install management-ai-helper@task-lifecycle
+/plugin install vsr-skills@task-lifecycle
 
 # Configure for your project
 /setup-task-lifecycle

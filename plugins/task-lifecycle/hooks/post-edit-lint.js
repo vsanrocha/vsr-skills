@@ -69,14 +69,22 @@ const [stdout, stderr, exitCode] = await Promise.all([
   proc.exited,
 ]);
 
+const combinedOutput = [stdout, stderr].filter(Boolean).join("\n").trim();
+
 if (exitCode === 0) {
   console.error(`[post-edit-lint] No lint errors in ${filePath}`);
   console.log(JSON.stringify({}));
   process.exit(0);
 }
 
+// ESLint missing config — not a lint error, skip
+if (combinedOutput.includes("couldn't find an eslint.config") || combinedOutput.includes("No ESLint configuration")) {
+  console.error(`[post-edit-lint] No ESLint config found — skipping`);
+  console.log(JSON.stringify({}));
+  process.exit(0);
+}
+
 // Lint failed — block and report errors
-const combinedOutput = [stdout, stderr].filter(Boolean).join("\n").trim();
 const lines = combinedOutput.split("\n");
 const truncated = lines.length > MAX_ERROR_LINES;
 const displayLines = truncated ? lines.slice(0, MAX_ERROR_LINES) : lines;
