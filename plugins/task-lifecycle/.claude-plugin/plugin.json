@@ -4,39 +4,5 @@
   "version": "2.1.0",
   "author": {
     "name": "Vinicius Rocha"
-  },
-  "skills": [
-    "setup-task-lifecycle",
-    "start-task",
-    "grill-me",
-    "write-a-prd",
-    "prd-to-tasks",
-    "test-driven-execution",
-    "verification-before-completion",
-    "systematic-debugging",
-    "review-pr",
-    "learn-from-review",
-    "git-worktrees",
-    "dev-stack",
-    "session-evaluation",
-    "task-flow-report",
-    "doctor",
-    "autoresearch",
-    "insights",
-    "ship",
-    "learn",
-    "search-learnings",
-    "wrap-up"
-  ],
-  "scripts": [
-    "evaluator.js",
-    "contract-negotiation.js",
-    "ralph-harness.js",
-    "research-summary.js"
-  ],
-  "hooks": "hooks/hooks.json",
-  "rules": [
-    "agent-quality-standards",
-    "ralph-execution"
-  ]
+  }
 }
