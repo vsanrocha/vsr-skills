@@ -1,7 +1,7 @@
 {
   "name": "task-lifecycle",
   "description": "Complete autonomous development lifecycle: spec to delivery. Includes hook-based quality enforcement, persistent learning database, adversarial evaluation, and behavioral rules.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": {
     "name": "Vinicius Rocha"
   }
