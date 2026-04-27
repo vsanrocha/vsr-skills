@@ -19,6 +19,11 @@
       "name": "conventional-commits",
       "source": "./plugins/conventional-commits",
       "description": "Conventional Commits workflow with Co-Authored-By enforcement hook"
+    },
+    {
+      "name": "task-lifecycle",
+      "source": "./plugins/task-lifecycle",
+      "description": "Complete autonomous development lifecycle: spec to delivery. Includes hook-based quality enforcement, persistent learning database, adversarial evaluation, and behavioral rules."
     }
   ]
 }
