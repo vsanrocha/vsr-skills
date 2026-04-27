@@ -3,23 +3,23 @@
     "SessionStart": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./session-start.js", "timeout": 30 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/session-start.js'", "timeout": 30 }
         ]
       }
     ],
     "SessionEnd": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./session-end.js", "timeout": 30 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/session-end.js'", "timeout": 30 }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./stop-verify.js", "timeout": 300 },
-          { "type": "command", "command": "node ./learn-capture.js", "timeout": 30 },
-          { "type": "command", "command": "node ./research-reminder.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/stop-verify.js'", "timeout": 300 },
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/learn-capture.js'", "timeout": 30 },
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/research-reminder.js'", "timeout": 5 }
         ]
       }
     ],
@@ -27,14 +27,14 @@
       {
         "matcher": "Write",
         "hooks": [
-          { "type": "command", "command": "node ./secret-detection.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/secret-detection.js'", "timeout": 5 }
         ]
       },
       {
         "matcher": "Bash",
         "hooks": [
-          { "type": "command", "command": "node ./dangerous-op-guard.js", "timeout": 5 },
-          { "type": "command", "command": "node ./pre-commit-check.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/dangerous-op-guard.js'", "timeout": 5 },
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/pre-commit-check.js'", "timeout": 5 }
         ]
       }
     ],
@@ -42,41 +42,41 @@
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "node ./post-edit-lint.js", "timeout": 120 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/post-edit-lint.js'", "timeout": 120 }
         ]
       },
       {
         "matcher": "Bash",
         "hooks": [
-          { "type": "command", "command": "node ./test-failure-check.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/test-failure-check.js'", "timeout": 5 }
         ]
       },
       {
         "matcher": "Grep|Bash",
         "hooks": [
-          { "type": "command", "command": "node ./truncation-check.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/truncation-check.js'", "timeout": 5 }
         ]
       }
     ],
     "UserPromptSubmit": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./drift-detector.js", "timeout": 5 },
-          { "type": "command", "command": "node ./correction-detector.js", "timeout": 5 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/drift-detector.js'", "timeout": 5 },
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/correction-detector.js'", "timeout": 5 }
         ]
       }
     ],
     "PreCompact": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./pre-compact.js", "timeout": 30 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/pre-compact.js'", "timeout": 30 }
         ]
       }
     ],
     "PostCompact": [
       {
         "hooks": [
-          { "type": "command", "command": "node ./post-compact.js", "timeout": 30 }
+          { "type": "command", "command": "bash -c 'node \"$HOME/.claude/plugins/cache/vsr-skills/task-lifecycle/\"*/hooks/post-compact.js'", "timeout": 30 }
         ]
       }
     ]
