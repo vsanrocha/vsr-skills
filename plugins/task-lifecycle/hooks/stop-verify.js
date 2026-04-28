@@ -4,7 +4,7 @@
 // Runs type-check + linter + tests before allowing agent to finish.
 // If stop_hook_active is true (retry after block), lets through to prevent infinite loop.
 
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readFileSync, unlinkSync } from "fs";
 import { join } from "path";
 
 const MAX_OUTPUT_LINES = 30;
@@ -191,6 +191,18 @@ async function main() {
     console.log(JSON.stringify({}));
     return;
   }
+
+  const sessionId = input.session_id || "default";
+  const dirtyFlag = `/tmp/stop-verify-dirty-${sessionId}`;
+
+  if (!existsSync(dirtyFlag)) {
+    console.error("[stop-verify] No file edits this turn, skipping checks");
+    console.log(JSON.stringify({}));
+    return;
+  }
+
+  // Clear flag before running checks
+  unlinkSync(dirtyFlag);
 
   const projectTypes = detectProjectTypes();
 
